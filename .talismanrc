@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: src/Components/Pagination.jsx
+  checksum: 796360b2c02bdd589c49fc572449caa569139b8e4a1e55c53f76fb28a5e4542d
+version: ""
