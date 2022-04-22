@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import MovieCard from "../Components/MovieCard";
 import "./styles.css";
 import AddForm from "./AddForm";
@@ -9,7 +9,20 @@ import Pagination from "../Components/Pagination";
 const HomePage = () => {
   const [isAscending, setAscending] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [pageSize, setPageSize] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageSizeChange = (event) => {
+    setPageSize(event.target.value);
+  };
   const { dispatch, movies, initialMovies } = useContext(MovieContext);
+
+  let movieData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * pageSize;
+    const lastPageIndex = firstPageIndex + pageSize;
+    return movies.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage, movies, pageSize]);
+
   useEffect(() => {
     async function fetchMyAPI() {
       try {
@@ -70,6 +83,15 @@ const HomePage = () => {
           >
             Z - A
           </button>
+          <select
+            className='button'
+            value={pageSize}
+            onChange={handlePageSizeChange}
+          >
+            <option value='10'>10</option>
+            <option value='20'>20</option>
+            <option value='30'>30</option>
+          </select>
         </div>
       </div>
       <div>
@@ -77,13 +99,19 @@ const HomePage = () => {
           <AddForm />
         </div>
 
-        <div className="pagination">
-          <Pagination />
+        <div className='pagination'>
+          <Pagination
+            className='pagination-bar'
+            currentPage={currentPage}
+            totalMovieCount={movies.length}
+            pageSize={pageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
         </div>
-        
-        {movies.length ? (
+
+        {movieData.length ? (
           <div className='movie-list'>
-            {movies.map((movie) => (
+            {movieData.map((movie) => (
               <MovieCard key={movie.id} {...movie} />
             ))}
           </div>
