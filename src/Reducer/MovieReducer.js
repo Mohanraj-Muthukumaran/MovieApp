@@ -16,7 +16,7 @@ const filter = ({ initialMovies, searchTerm, isAscending }) => {
   );
   sort = sortAscending(filterData);
   if (!isAscending) {
-    sort = sortAscending(filterData).reverse();
+    sort = sort.reverse();
   }
   return sort;
 };

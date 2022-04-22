@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { MovieContext } from "../../Reducer/MovieContext";
+import React from "react";
 import { usePagination, DOTS } from "./usePagination";
 import "./Pagination.scss";
 
@@ -9,10 +8,7 @@ const Pagination = ({
   pageSize,
   pageButtonsBetweenCount = 1,
   currentPage,
-  className,
 }) => {
-  const { movies } = useContext(MovieContext);
-
   const paginationRange = usePagination({
     totalMovieCount,
     pageSize,
@@ -21,7 +17,10 @@ const Pagination = ({
   });
 
   // means less than 2 ie 1 or 0
-  if (paginationRange.length < 2) {
+  if (
+    !paginationRange.includes(currentPage) ||
+    paginationRange.length < 2
+  ) {
     return null;
   }
 
@@ -33,11 +32,18 @@ const Pagination = ({
     onPageChange(currentPage - 1);
   };
 
-  // let lastPage = paginationRange[paginationRange.length - 1];
+  let lastPage = paginationRange[paginationRange.length - 1];
 
   return (
     <ul className='pagination-container'>
-      <li className='pagination-item' onClick={onPrevious}>
+      <li
+        className={
+          currentPage === 1
+            ? "pagination-item disabled"
+            : "pagination-item"
+        }
+        onClick={onPrevious}
+      >
         <div className='arrow left'></div>
       </li>
       {paginationRange.map((pageNumber, index) => {
@@ -51,7 +57,11 @@ const Pagination = ({
           return (
             <li
               key={index}
-              className='pagination-item'
+              className={
+                currentPage === pageNumber
+                  ? "pagination-item disabled"
+                  : "pagination-item selected"
+              }
               onClick={() => onPageChange(pageNumber)}
             >
               {pageNumber}
@@ -59,7 +69,14 @@ const Pagination = ({
           );
         }
       })}
-      <li className='pagination-item' onClick={onNext}>
+      <li
+        className={
+          currentPage === lastPage
+            ? "pagination-item disabled"
+            : "pagination-item"
+        }
+        onClick={onNext}
+      >
         <div className='arrow right'></div>
       </li>
     </ul>

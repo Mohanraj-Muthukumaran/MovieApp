@@ -55,7 +55,7 @@ const HomePage = () => {
     <>
       <div className='nav-bar'>
         <header className='App-header'>
-          <h1>Movie Cards</h1>
+          <h2>Movie Cards</h2>
         </header>
         <div className='search-box'>
           <input
@@ -101,7 +101,6 @@ const HomePage = () => {
 
         <div className='pagination'>
           <Pagination
-            className='pagination-bar'
             currentPage={currentPage}
             totalMovieCount={movies.length}
             pageSize={pageSize}
