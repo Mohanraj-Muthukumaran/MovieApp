@@ -44,7 +44,6 @@ function MovieReducer(state, action) {
         movies: filter(payload),
       };
     case "ADD_MOVIE":
-      console.log(payload);
       return {
         ...state,
         initialMovies: filter({

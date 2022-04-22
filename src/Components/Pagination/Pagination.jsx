@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { MovieContext } from "../Reducer/MovieContext";
-import { usePagination, DOTS } from "./Pagination/usePagination";
-import "./Pagination/Pagination.scss";
+import { MovieContext } from "../../Reducer/MovieContext";
+import { usePagination, DOTS } from "./usePagination";
+import "./Pagination.scss";
 
 const Pagination = ({
   onPageChange,
@@ -12,7 +12,6 @@ const Pagination = ({
   className,
 }) => {
   const { movies } = useContext(MovieContext);
-  console.log(movies);
 
   const paginationRange = usePagination({
     totalMovieCount,

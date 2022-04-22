@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { MovieContext } from "../Reducer/MovieContext";
-import AddButton from "./AddButton";
+import AddButton from "./Button/AddButton";
 import "./styles.css";
 
 export const Form = ({ close }) => {
@@ -24,6 +24,7 @@ export const Form = ({ close }) => {
       },
     };
     addMovie(finalValues);
+    setInputs({});
     close();
   };
 
@@ -34,6 +35,7 @@ export const Form = ({ close }) => {
         <input
           type='text'
           name='name'
+          id='name'
           value={inputs.name || ""}
           onChange={handleChange}
         />
@@ -43,6 +45,7 @@ export const Form = ({ close }) => {
         <input
           type='text'
           name='language'
+          id='language'
           value={inputs.language || ""}
           onChange={handleChange}
         />
@@ -52,6 +55,7 @@ export const Form = ({ close }) => {
         <input
           type='text'
           name='image'
+          id='image'
           value={inputs.image || ""}
           onChange={handleChange}
         />
@@ -61,6 +65,7 @@ export const Form = ({ close }) => {
         <input
           type='number'
           name='rating'
+          id='rating'
           value={inputs.rating || ""}
           onChange={handleChange}
         />

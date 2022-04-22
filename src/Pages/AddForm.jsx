@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Form from "../Components/Form";
-import Modal, { ModalBody, ModalHeader } from "../Components/Modal";
+import Modal, { ModalBody, ModalHeader } from "../Components/Modal/Modal";
 import "./styles.css";
 
 const AddForm = () => {

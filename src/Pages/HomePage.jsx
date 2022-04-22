@@ -4,7 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import "./styles.css";
 import AddForm from "./AddForm";
 import { MovieContext } from "../Reducer/MovieContext";
-import Pagination from "../Components/Pagination";
+import Pagination from "../Components/Pagination/Pagination";
 
 const HomePage = () => {
   const [isAscending, setAscending] = useState(true);
