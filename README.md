@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Demo
 
-![UI DEMO, Application demo](./public/Screenshot 2022-04-22 at 10.50.28 AM.png)
+![UI DEMO, Application demo](./public/demo.png)
 
 ## Available Scripts
 
