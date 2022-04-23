@@ -17,6 +17,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![UI DEMO, Application demo](./public/demo.png)
 
+## Contributors:
+
+<ul>
+<li>[Sanjay kumar](https://github.com/SSK-14).</li> <li>[Mohanraj Muthukumaran](https://github.com/Mohanraj-Muthukumaran).</li> 
+</ul>
+
+
 ## Available Scripts
 
 In the project directory, you can run:
