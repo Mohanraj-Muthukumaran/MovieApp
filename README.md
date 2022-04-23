@@ -19,9 +19,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributors:
 
-<ul>
-<li>[Sanjay kumar](https://github.com/SSK-14).</li> <li>[Mohanraj Muthukumaran](https://github.com/Mohanraj-Muthukumaran).</li> 
-</ul>
+
+>[Sanjay kumar](https://github.com/SSK-14)\
+ [Mohanraj Muthukumaran](https://github.com/Mohanraj-Muthukumaran)
+
 
 
 ## Available Scripts
