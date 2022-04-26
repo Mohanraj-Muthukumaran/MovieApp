@@ -99,15 +99,6 @@ const HomePage = () => {
           <AddForm />
         </div>
 
-        <div className='pagination'>
-          <Pagination
-            currentPage={currentPage}
-            totalMovieCount={movies.length}
-            pageSize={pageSize}
-            onPageChange={(page) => setCurrentPage(page)}
-          />
-        </div>
-
         {movieData.length ? (
           <div className='movie-list'>
             {movieData.map((movie) => (
@@ -119,6 +110,15 @@ const HomePage = () => {
             <p>No Results Found</p>
           </div>
         )}
+
+        <div className='pagination'>
+          <Pagination
+            currentPage={currentPage}
+            totalMovieCount={movies.length}
+            pageSize={pageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+        </div>
       </div>
     </>
   );

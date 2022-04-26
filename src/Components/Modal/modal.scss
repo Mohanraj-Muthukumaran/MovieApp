@@ -32,12 +32,20 @@
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+      background: black;
+      border: 3px solid #888888;
+      border-radius: 40px;
   }
 
   &__header,
   &__body,
   &__footer {
       padding: 16px 20px;
+      h3 {
+        font-size: 2rem;
+        margin: 0;
+        color: #4267b2;
+    }
   }
 
   &__close {
