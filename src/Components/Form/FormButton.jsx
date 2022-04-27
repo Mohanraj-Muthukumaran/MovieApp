@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import Form from "../Components/Form";
-import Modal, { ModalBody, ModalHeader } from "../Components/Modal/Modal";
+import Form from "./Form";
+import Modal, { ModalBody, ModalHeader } from "../Modal/Modal";
 import "./styles.css";
 
-const AddForm = () => {
+const FormButton = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -28,4 +28,4 @@ const AddForm = () => {
   );
 };
 
-export default AddForm;
+export default FormButton;

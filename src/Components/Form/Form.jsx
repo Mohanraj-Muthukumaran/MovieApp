@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { MovieContext } from "../Reducer/MovieContext";
-import AddButton from "./Button/AddButton";
+import { MovieContext } from "../../Reducer/MovieContext";
+import AddButton from "../Button/AddButton";
 import "./styles.css";
 
 export const Form = ({ close }) => {

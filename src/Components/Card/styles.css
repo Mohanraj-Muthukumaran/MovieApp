@@ -75,26 +75,3 @@
   font-size: 2rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-}
-
-label{
-  margin: 10px;
-  color: white;
-}
-
-input {
-  width: 100%;
-  padding: 10px 18px;
-  margin: 6px 0;
-  box-sizing: border-box;
-  color: white;
-  background-color: #0c131e;
-  border-radius: 20px;
-  border: 0;
-}

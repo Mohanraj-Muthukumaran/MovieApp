@@ -17,6 +17,7 @@ export const MovieProvider = ({ children }) => {
   const value = {
     movies: state.movies,
     initialMovies: state.initialMovies,
+    pageSize: state.pageSize,
     dispatch,
     addMovie,
   };

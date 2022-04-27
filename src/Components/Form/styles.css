@@ -1,0 +1,37 @@
+.add-button{
+	position:fixed;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#4267b2;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px black;
+  width: fit-content;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+label{
+  margin: 10px;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px 18px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  color: white;
+  background-color: #0c131e;
+  border-radius: 20px;
+  border: 0;
+}

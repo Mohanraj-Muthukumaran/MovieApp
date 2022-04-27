@@ -1,6 +1,7 @@
 export const initialState = {
   movies: [],
   initialMovies: [],
+  pageSize: 10,
 };
 
 const sortAscending = (movieData) => {
@@ -51,6 +52,11 @@ function MovieReducer(state, action) {
           searchTerm: "",
           isAscending: true,
         }),
+      };
+    case "PAGE_SIZE_CHANGE":
+      return {
+        ...state,
+        pageSize: payload,
       };
     default:
       throw new Error();
